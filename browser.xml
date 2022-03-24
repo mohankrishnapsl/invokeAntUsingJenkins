@@ -1,0 +1,18 @@
+<project name="demo" basedir="." xmlns:sf="antlib:com.salesforce" default="start">
+   <!--<property environment="env"/>-->
+   <taskdef resource="net/sf/antcontrib/antlib.xml" classpath="CISupport/lib/ant-contrib-1.0b3.jar"/>
+   <target name="start">
+      <switch value="${browserName}">
+
+         <case value="chrome">
+            <exec executable="C:\Program Files\Google\Chrome\Application\chrome.exe"/>
+         </case>
+         <case value="iexplore">
+            <exec executable="C:\Program Files\Internet Explorer\iexplore.exe"/>
+         </case>
+         <default>
+            <exec executable="C:\Program Files\Google\Chrome\Application\chrome.exe"/>
+         </default>
+       </switch>
+   </target>
+</project>
